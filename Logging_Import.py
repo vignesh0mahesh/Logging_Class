@@ -46,7 +46,7 @@ class LogUpload:
         print(color("Logging Class Sucessfully Imported", fg='green'))
         
             
-    def inialize_loki(self, url, system_name):
+    def initialize_loki(self, url, system_name):
         try:
             
             handler = logging_loki.LokiHandler(
