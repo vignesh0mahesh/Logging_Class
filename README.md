@@ -35,5 +35,22 @@ After initializing the class run the following command:
 initialize_loki(url, system_name)
 ```
 The first parameter is the Loki URL, it should be in the following format: "https://my-loki-instance/loki/api/v1/push"
+
 The second parameter is the system name, this is added as a tag so that you can filter for this specific system in Grafana Loki. 
+
+
+## Usage
+```python
+
+log.debug("This is a Debug Message")
+
+log.info("This is Info Message")
+
+log.warning("This is a Warning Message")
+
+log.error("This is a Error Message")
+
+log.critical("This is a Critical Message")
+
+```
 
