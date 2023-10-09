@@ -92,8 +92,9 @@ class LogUpload:
             self.loki_logger.debug(debug_string, extra={"tags": self.tags})
             
         if self.debugging:
-            LEVEL_DEBUG = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {debug_string}"
-            self.logger.debug(ic(LEVEL_DEBUG))
+            ic.configureOutput(prefix="DEBUG_")
+            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {debug_string}"
+            self.logger.debug(ic(MESSAGE))
             
         else:
             self.logger.debug(debug_string)
@@ -116,8 +117,9 @@ class LogUpload:
             print(color(info_string, fg='blue'))
             
         if self.debugging:
-            LEVEL_INFO = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {info_string}"
-            self.logger.info(ic(LEVEL_INFO))
+            ic.configureOutput(prefix="INFO_")
+            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {info_string}"
+            self.logger.info(ic(MESSAGE))
             
         else:
             self.logger.info(info_string)
@@ -140,8 +142,9 @@ class LogUpload:
             print(color(f"Warning: {warn_string}", fg=3, style='underline'))
             
         if self.debugging:
-            LEVEL_WARNING = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {warn_string}"
-            self.logger.warning(ic(LEVEL_WARNING))
+            ic.configureOutput(prefix="WARNING_")
+            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {warn_string}"
+            self.logger.warning(ic(MESSAGE))
             
         else:
             self.logger.warning(warn_string)
@@ -163,8 +166,9 @@ class LogUpload:
             print(color(f"ERROR: {err_string}", fg=196, style='bold'))
             
         if self.debugging:
-            LEVEL_ERROR = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {err_string}"
-            self.logger.error(ic(LEVEL_ERROR))
+            ic.configureOutput(prefix="ERROR_")
+            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {err_string}"
+            self.logger.error(ic(MESSAGE))
             
         else:
             self.logger.error(err_string)
@@ -187,8 +191,9 @@ class LogUpload:
             print(color(f"CRITICAL: {crit_string}", fg=200, style='bold+underline'))
             
         if self.debugging:
-            LEVEL_ERROR = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {crit_string}"
-            self.logger.critical(ic(LEVEL_ERROR))
+            ic.configureOutput(prefix="CRITICAL_")
+            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {crit_string}"
+            self.logger.critical(ic(MESSAGE))
             
         else:
             self.logger.critical(crit_string)
