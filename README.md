@@ -30,11 +30,13 @@ The first parameter is the name of which your log file will be saved.
 It will have the following naming convention: %d_%m_%Y-%H-%M-%S_<LOG FILE NAME>_<LOGGING LEVEL>_Log.log
 
 The second parameter is the Logging Level, there are 3 options to choose from:
-1. Silent: Nothing is printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). Level=logging.INFO
+1. Silent: Nothing is printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). **Level=logging.INFO**
    
-3. Print: Logs will be printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). Level=logging.INFO
+2. Print: Logs will be printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). **Level=logging.INFO**
+
+    **THIS IS THE DEFAULT SETTING**
    
-5. Debug: Logs will be printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). Level=logging.DEBUG
+4. Debug: Logs will be printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). **Level=logging.DEBUG**
 
 ### Enabling Loki Logging
 After initializing the class run the following command:
