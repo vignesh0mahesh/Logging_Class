@@ -15,6 +15,13 @@ Please install all the required packages from the requirements.txt
 pip install -r requirements.txt
 ```
 
+### Importing The Class
+```python
+import sys
+sys.path.insert(0, r"<Location of Repo>")
+from Logging_Import import *
+```
+
 ### Initializing The Class
 ```python
 log = LogUpload('<ENTER LOG FILE NAME>', 'ENTER LOGGING LEVEL')
