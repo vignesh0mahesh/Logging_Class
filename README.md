@@ -34,7 +34,7 @@ The second parameter is the Logging Level, there are 3 options to choose from:
    
 2. Print: Logs will be printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). **Level=logging.INFO**
 
-    **THIS IS THE DEFAULT SETTING**
+    **_THIS IS THE DEFAULT SETTING_**
    
 4. Debug: Logs will be printed in the Python Terminal, logs will be published in the log file and uploaded to Grafana Loki if it is initialized (below). **Level=logging.DEBUG**
 
