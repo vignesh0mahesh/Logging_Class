@@ -8,7 +8,6 @@ from datetime import datetime
 from icecream import ic
 from colors import *
 
-
 class LogUpload:
     def __init__(self, log_name, log_level='Print'):
         # log_level = 'Silent' , 'Print' or 'Debug'
@@ -92,8 +91,8 @@ class LogUpload:
             self.loki_logger.debug(debug_string, extra={"tags": self.tags})
             
         if self.debugging:
-            ic.configureOutput(prefix="DEBUG_")
-            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {debug_string}"
+            ic.configureOutput(prefix=f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - DEBUG_")
+            MESSAGE = debug_string
             self.logger.debug(ic(MESSAGE))
             
         else:
@@ -117,8 +116,8 @@ class LogUpload:
             print(color(info_string, fg='blue'))
             
         if self.debugging:
-            ic.configureOutput(prefix="INFO_")
-            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {info_string}"
+            ic.configureOutput(prefix=f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - INFO_")
+            MESSAGE = info_string
             self.logger.info(ic(MESSAGE))
             
         else:
@@ -142,8 +141,8 @@ class LogUpload:
             print(color(f"Warning: {warn_string}", fg=3, style='underline'))
             
         if self.debugging:
-            ic.configureOutput(prefix="WARNING_")
-            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {warn_string}"
+            ic.configureOutput(prefix=f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - WARNING_")
+            MESSAGE = warn_string
             self.logger.warning(ic(MESSAGE))
             
         else:
@@ -166,8 +165,8 @@ class LogUpload:
             print(color(f"ERROR: {err_string}", fg=196, style='bold'))
             
         if self.debugging:
-            ic.configureOutput(prefix="ERROR_")
-            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {err_string}"
+            ic.configureOutput(prefix=f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - ERROR_")
+            MESSAGE = err_string
             self.logger.error(ic(MESSAGE))
             
         else:
@@ -191,8 +190,8 @@ class LogUpload:
             print(color(f"CRITICAL: {crit_string}", fg=200, style='bold+underline'))
             
         if self.debugging:
-            ic.configureOutput(prefix="CRITICAL_")
-            MESSAGE = f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - MESSAGE: {crit_string}"
+            ic.configureOutput(prefix=f"CLASS: {self.tags['CLASS']} - FUNCTION: {self.tags['FUNCTION']} - MODULE: {self.tags['MODULE']} - CRITICAL_")
+            MESSAGE = crit_string
             self.logger.critical(ic(MESSAGE))
             
         else:
