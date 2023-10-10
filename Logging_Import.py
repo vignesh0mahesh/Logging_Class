@@ -48,10 +48,7 @@ class LogUpload:
     def initialize_loki(self, url, system_name):
         try:
             
-            handler = logging_loki.LokiHandler(
-                url=url, 
-                version="1",
-            )
+            handler = logging_loki.LokiHandler(url=url, version="1",)
             self.loki_logger.addHandler(handler)
 
             self.system_tag = system_name
@@ -60,6 +57,7 @@ class LogUpload:
             self.tags = self.default_tag
             self.append_tags({"SYSTEM": self.system_tag, "USER": self.user_tag})
             self.log_upload = True
+            print(color('Loki Logging Initialized', fg='green'))
 
         except:
             print(color('Log Function Import Unsucessfull', fg='red', style='bold'))
