@@ -7,28 +7,15 @@
   <title>Logging Function Usages &mdash; Python Logging Class 0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster.custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster.bundle.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/micromodal.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/sphinx_rtd_theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f6245a2f"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/js/hoverxref.js"></script>
-        <script src="_static/js/tooltipster.bundle.min.js"></script>
-        <script src="_static/js/micromodal.min.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -59,6 +46,42 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Installation/prerequisites.html">Prerequisites</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Getting%20Started/importing.html">Importing The Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Getting%20Started/importing.html#initializing-the-class">Initializing The Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Getting%20Started/importing.html#enabling-loki-logging">Enabling Loki Logging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Logging Function Usages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#debug-logging-function">Debug Logging Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Logging_Import.LogUpload.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#info-logging-function">Info Logging Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Logging_Import.LogUpload.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#warning-logging-function">Warning Logging Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Logging_Import.LogUpload.warning"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#error-logging-function">Error Logging Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Logging_Import.LogUpload.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#critical-logging-function">Critical Logging Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Logging_Import.LogUpload.critical"><code class="docutils literal notranslate"><span class="pre">critical()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Example:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Example/example_file.html">Example Usage</a></li>
+</ul>
 
         </div>
       </div>
@@ -85,26 +108,81 @@
            <div itemprop="articleBody">
              
   <section id="logging-function-usages">
-<h1>Logging Function Usages<a class="headerlink" href="#logging-function-usages" title="Link to this heading"></a></h1>
+<h1>Logging Function Usages<a class="headerlink" href="#logging-function-usages" title="Permalink to this heading"></a></h1>
 <section id="debug-logging-function">
-<h2>Debug Logging Function<a class="headerlink" href="#debug-logging-function" title="Link to this heading"></a></h2>
+<h2>Debug Logging Function<a class="headerlink" href="#debug-logging-function" title="Permalink to this heading"></a></h2>
 <p class="linemarker linemarker-7">This is the function to log a debug level message</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Logging_Import.LogUpload.debug">
+<span class="sig-prename descclassname"><span class="pre">Logging_Import.LogUpload.</span></span><span class="sig-name descname"><span class="pre">debug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Logging_Import.LogUpload.debug" title="Permalink to this definition"></a></dt>
+<dd><p class="linemarker linemarker-1">To log a debug level message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>debug_string</strong> (<em>str</em>) – Message to log</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="info-logging-function">
-<h2>Info Logging Function<a class="headerlink" href="#info-logging-function" title="Link to this heading"></a></h2>
+<h2>Info Logging Function<a class="headerlink" href="#info-logging-function" title="Permalink to this heading"></a></h2>
 <p class="linemarker linemarker-13">This is the function to log a info level message</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Logging_Import.LogUpload.info">
+<span class="sig-prename descclassname"><span class="pre">Logging_Import.LogUpload.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Logging_Import.LogUpload.info" title="Permalink to this definition"></a></dt>
+<dd><p class="linemarker linemarker-1">To log a info level message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>info_string</strong> (<em>str</em>) – Message to log</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="warning-logging-function">
-<h2>Warning Logging Function<a class="headerlink" href="#warning-logging-function" title="Link to this heading"></a></h2>
+<h2>Warning Logging Function<a class="headerlink" href="#warning-logging-function" title="Permalink to this heading"></a></h2>
 <p class="linemarker linemarker-20">This is the function to log a warning level message</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Logging_Import.LogUpload.warning">
+<span class="sig-prename descclassname"><span class="pre">Logging_Import.LogUpload.</span></span><span class="sig-name descname"><span class="pre">warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warn_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Logging_Import.LogUpload.warning" title="Permalink to this definition"></a></dt>
+<dd><p class="linemarker linemarker-1">To log a warning level message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>warn_string</strong> (<em>str</em>) – Message to log</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="error-logging-function">
-<h2>Error Logging Function<a class="headerlink" href="#error-logging-function" title="Link to this heading"></a></h2>
+<h2>Error Logging Function<a class="headerlink" href="#error-logging-function" title="Permalink to this heading"></a></h2>
 <p class="linemarker linemarker-26">This is the function to log a error level message</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Logging_Import.LogUpload.error">
+<span class="sig-prename descclassname"><span class="pre">Logging_Import.LogUpload.</span></span><span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Logging_Import.LogUpload.error" title="Permalink to this definition"></a></dt>
+<dd><p class="linemarker linemarker-1">To log a error level message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>err_string</strong> (<em>str</em>) – Message to log</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="critical-logging-function">
-<h2>Critical Logging Function<a class="headerlink" href="#critical-logging-function" title="Link to this heading"></a></h2>
+<h2>Critical Logging Function<a class="headerlink" href="#critical-logging-function" title="Permalink to this heading"></a></h2>
 <p class="linemarker linemarker-32">This is the function to log a critical level message</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Logging_Import.LogUpload.critical">
+<span class="sig-prename descclassname"><span class="pre">Logging_Import.LogUpload.</span></span><span class="sig-name descname"><span class="pre">critical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crit_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Logging_Import.LogUpload.critical" title="Permalink to this definition"></a></dt>
+<dd><p class="linemarker linemarker-1">To log a critical level message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>crit_string</strong> (<em>str</em>) – Message to log</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 

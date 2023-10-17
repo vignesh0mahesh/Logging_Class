@@ -7,28 +7,15 @@
   <title>Importing The Class &mdash; Python Logging Class 0.0.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=f6245a2f"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/js/hoverxref.js"></script>
-        <script src="../_static/js/tooltipster.bundle.min.js"></script>
-        <script src="../_static/js/micromodal.min.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -59,6 +46,23 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Installation/prerequisites.html">Prerequisites</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Importing The Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#initializing-the-class">Initializing The Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#enabling-loki-logging">Enabling Loki Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Logging_Import.LogUpload.initialize_loki"><code class="docutils literal notranslate"><span class="pre">initialize_loki()</span></code></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Logging Function Usages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Example:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Example/example_file.html">Example Usage</a></li>
+</ul>
 
         </div>
       </div>
@@ -85,7 +89,7 @@
            <div itemprop="articleBody">
              
   <section id="importing-the-class">
-<h1>Importing The Class<a class="headerlink" href="#importing-the-class" title="Link to this heading"></a></h1>
+<h1>Importing The Class<a class="headerlink" href="#importing-the-class" title="Permalink to this heading"></a></h1>
 <p class="linemarker linemarker-4">To import the class into your code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;&lt;Location of Repo&gt;&quot;</span><span class="p">)</span>
@@ -94,7 +98,7 @@
 </div>
 </section>
 <section id="initializing-the-class">
-<h1>Initializing The Class<a class="headerlink" href="#initializing-the-class" title="Link to this heading"></a></h1>
+<h1>Initializing The Class<a class="headerlink" href="#initializing-the-class" title="Permalink to this heading"></a></h1>
 <p class="linemarker linemarker-14">To initialize the class, instantiate <code class="docutils literal notranslate"><span class="pre">log</span></code> as a global variable,</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">LogUpload</span><span class="p">(</span><span class="s1">&#39;&lt;ENTER LOG FILE NAME&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;ENTER LOGGING LEVEL&#39;</span><span class="p">)</span>
 </pre></div>
@@ -131,13 +135,27 @@ It will have the following naming convention: <code class="docutils literal notr
 <p class="linemarker linemarker-34">If no parameter is given default is <code class="docutils literal notranslate"><span class="pre">'Print'</span></code></p>
 </section>
 <section id="enabling-loki-logging">
-<h1>Enabling Loki Logging<a class="headerlink" href="#enabling-loki-logging" title="Link to this heading"></a></h1>
+<h1>Enabling Loki Logging<a class="headerlink" href="#enabling-loki-logging" title="Permalink to this heading"></a></h1>
 <p class="linemarker linemarker-38">After initializing the class run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">initialize_loki</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">system_name</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="linemarker linemarker-43">The first parameter <code class="docutils literal notranslate"><span class="pre">url</span></code> is the Loki URL, it should be in the following format: “<a class="reference external" href="https://my-loki-instance/loki/api/v1/push">https://my-loki-instance/loki/api/v1/push</a>”</p>
 <p class="linemarker linemarker-45">The second parameter <code class="docutils literal notranslate"><span class="pre">system_name</span></code> is added as a tag so that you can filter for this specific system in Grafana Loki.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Logging_Import.LogUpload.initialize_loki">
+<span class="sig-prename descclassname"><span class="pre">Logging_Import.LogUpload.</span></span><span class="sig-name descname"><span class="pre">initialize_loki</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Logging_Import.LogUpload.initialize_loki" title="Permalink to this definition"></a></dt>
+<dd><p class="linemarker linemarker-1">This function is used to initialize a connection to your loki logging server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – Enter the url to your loki logging server instance, should be in the following format : “<a class="reference external" href="https://my-loki-instance/loki/api/v1/push">https://my-loki-instance/loki/api/v1/push</a>”</p></li>
+<li><p><strong>system_name</strong> (<em>str</em>) – Enter a name that will be used as a tag for your system, so that you can filter for this specific system in Grafana Loki.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <p class="linemarker linemarker-49">To learn more about Loki Logging go
 <a class="reference external" href="https://grafana.com/oss/loki/">here</a></p>
 </section>
