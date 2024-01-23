@@ -48,7 +48,7 @@ class LogUpload:
         self.log_upload = False
         self.tags = {"MODULE": "", "CLASS": "", "FUNCTION": ""}
         
-        print(color("Logging Class Sucessfully Imported", fg='green'))
+        #print(color("Logging Class Sucessfully Imported", fg='green'))
         
     def initialize_loki(self, url, system_name):
         """This function is used to initialize a connection to your loki logging server. 
