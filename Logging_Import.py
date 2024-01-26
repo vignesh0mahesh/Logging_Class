@@ -247,6 +247,9 @@ class LogUpload:
             
         else:
             self.logger.critical(crit_string)
+            
+    def shutdown(self):
+        logging.shutdown()
 
 
 ### ------------------------------- USAGE ------------------------------- ###
